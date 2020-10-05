@@ -84,7 +84,12 @@ header img {
     height: var(--header-height);
 }
 
-
+.stockImage {
+    width: 200px;
+}
+.stockImageFire {
+    height: 200px;
+}
 
 content {
     width: 80%;
