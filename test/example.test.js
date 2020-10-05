@@ -5,7 +5,7 @@ const test = QUnit.test;
 
 test('time to test a function', (expect) => {
     //Arrange
-    const tool = {
+    const tools = {
         id: '00000',
         name: 'Fixed Blade Outdoor Knife with Sandvik Stainless Steel Blade, 4.1-Inch',
         maker: 'Morakniv',
