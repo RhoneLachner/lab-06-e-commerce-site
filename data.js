@@ -74,23 +74,23 @@ export const tools = [
 export const cart = [
     {
         id: 'knife',
-        quantity: 7,
+        quantity: 3,
     },
     {
         id: 'saw',
-        quantity: 2,
+        quantity: 1,
     },
     {
         id: 'hatchet',
-        quantity: 2,
+        quantity: 1,
     },
     {
         id: 'fireStarter',
-        quantity: 7,
+        quantity: 3,
     },
     {
         id: 'medKit',
-        quantity: 2,
+        quantity: 1,
     },
     {
         id: 'waterFilter',
