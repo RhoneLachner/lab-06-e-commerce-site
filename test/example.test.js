@@ -1,13 +1,13 @@
 // IMPORT MODULES under test here:
 // import { example } from '../example.js';
-import renderTools from "../render-tools.js";
+import { renderTools } from '../utils.js';
 
 
 const test = QUnit.test;
 
 test('time to test a function', (expect) => {
     //Arrange
-    const tools = {
+    const tool = {
         name: 'Fixed Blade Outdoor Knife with Sandvik Stainless Steel Blade, 4.1-Inch',
         maker: 'Morakniv',
         stockImage: 'knife.jpg',
@@ -19,7 +19,7 @@ test('time to test a function', (expect) => {
     
     //Act 
     // Call the function you're testing and set the result to a const
-    const actual = renderTools(tools);
+    const actual = renderTools(tool);
 
 
     
