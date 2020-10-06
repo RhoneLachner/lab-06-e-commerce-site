@@ -74,4 +74,5 @@ const tarp = {
 
 const tools = [knife, saw, hatchet, fireStarter, medKit, waterFilter, fisingKit, tarp];
 
-export default tools;
+export default function toolsFunction()
+
