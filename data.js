@@ -16,7 +16,7 @@ export const tools = [
         maker: 'Silky',
         stockImage: 'foldablesaw.jpg',
         price: 40,
-        onSale: true,
+        onSale: false,
          
     },
     {
@@ -25,7 +25,7 @@ export const tools = [
         maker: 'Gränsfors Bruks',
         stockImage: 'hatchet.jpg',
         price: 140,
-        onSale: true,
+        onSale: false,
     },
     {
         
@@ -42,7 +42,7 @@ export const tools = [
         maker: 'Adventure Kits',
         stockImage: 'medicalkit.jpg',
         price: 35,
-        onSale: true,
+        onSale: false,
     },
     {
         id: 'waterFilter',
@@ -56,7 +56,7 @@ export const tools = [
         id: 'fishingKit',
         name: 'Survival Fishing Kit Standard Version ',
         maker: 'Best Glide ASE',
-        stockImage: 'fishngkit.jpg',
+        stockImage: 'fishingkit.jpg',
         price: 24,
         onSale: true,
     },
@@ -66,7 +66,7 @@ export const tools = [
         maker: 'Aqua Quest',
         stockImage: 'tarp.jpg',
         price: 24,
-        onSale: true,
+        onSale: false,
     },
     
 ];
