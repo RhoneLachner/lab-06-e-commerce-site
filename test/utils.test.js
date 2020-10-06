@@ -21,8 +21,6 @@ test('time to test a function', (expect) => {
     // Call the function you're testing and set the result to a const
     const actual = renderTools(tool);
 
-
-    
     //Expect
     // Make assertions about what is expected versus the actual results
     expect.equal(actual.outerHTML, expected);
