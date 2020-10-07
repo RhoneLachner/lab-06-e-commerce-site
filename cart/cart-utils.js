@@ -1,6 +1,5 @@
-import { findById } from '../utils.js';
 import { tools as toolsArray } from '../data.js';
-
+import { findById } from '../utils.js';
 /*
     const cartItem = {
         id: 'airplanes',
@@ -15,6 +14,8 @@ export function renderCartTable(cartItem)
     const tdPrice = document.createElement('td');
     const tdQuantity = document.createElement('td');
     const tdTotal = document.createElement('td');
+
+
 
     tdQuantity.textContent = cartItem.quantity;
     console.log(cartItem);
@@ -59,3 +60,5 @@ export function cartTotal(cartArray) {
     return accumulator;
 }
 */
+
+

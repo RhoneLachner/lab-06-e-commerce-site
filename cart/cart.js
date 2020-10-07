@@ -1,17 +1,23 @@
 
 
-import { cart, tools } from '../data.js';
+import { tools } from '../data.js';
 import { renderCartTable } from './cart-utils.js';
-import { findById } from '../utils.js';
+import { findById, getFromLocalStorage, CART } from '../utils.js';
 
 const table = document.querySelector('tbody');
 const orderButton = document.querySelector('button');
+const cart = getFromLocalStorage(CART) || [];
 
 for (let i = 0; i < cart.length; i++) {
     const tool = cart[i];
-    const tr = renderCartTable(tool);
-    table.appendChild(tr);    
+
+    if (tool.quantity >= 0) {   
+        const tr = renderCartTable(tool);
+        table.appendChild(tr);    
+    }
 }
+
+
 
 const total = calcLineItem(cart);
 
@@ -46,4 +52,7 @@ orderButton.addEventListener('click', () => {
     // localStorage.removeItem(CART);
     localStorage.clear();
     window.location.href = '/';
+
+
+
 });
