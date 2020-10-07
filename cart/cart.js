@@ -2,7 +2,6 @@
 
 import { cart, tools } from '../data.js';
 import { renderCartTable } from './cart-utils.js';
-import { findByIdn getFromLocalStorage, CART } from '../utils.js';
 
 const table = document.querySelector('tbody');
 const orderButton = document.querySelector('button');
