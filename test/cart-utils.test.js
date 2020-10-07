@@ -29,3 +29,24 @@ test('should take in a cartItem and return a tr element with the appropriate con
     // Make assertions about what is expected versus the actual result
     expect.equal(actual.outerHTML, expected);
 });
+
+import { findById } from '../utils.js';
+import { tools } from '../data.js';
+
+test('should take in an array and return the correct id', (expect) => {
+
+    const expected = {
+        id: 'knife',
+        name: 'Fixed Blade Outdoor Knife with Sandvik Stainless Steel Blade, 4.1-Inch',
+        maker: 'Morakniv',
+        stockImage: 'knife.jpg',
+        price: 20,
+        onSale: true,
+
+    };
+    const id = 'knife';
+
+    const actual = findById(tools, id);
+
+    expect.deepEqual(expected, actual);
+});
