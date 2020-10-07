@@ -2,15 +2,14 @@
 
 import { cart, tools } from '../data.js';
 import { renderCartTable } from './cart-utils.js';
-import { findById } from '../utils.js';
+import { findByIdn getFromLocalStorage, CART } from '../utils.js';
 
 const table = document.querySelector('tbody');
+const orderButton = document.querySelector('button');
 
 for (let i = 0; i < cart.length; i++) {
     const tool = cart[i];
-
     const tr = renderCartTable(tool);
-
     table.appendChild(tr);    
 }
 
@@ -39,3 +38,12 @@ function calcLineItem(cartArray) {
 
     return accumulator;
 }
+
+orderButton.addEventListener('click', () => {
+    const stringyCart = JSON.stringify(cart, true, 2);
+    alert(stringyCart);
+
+    // localStorage.removeItem(CART);
+    localStorage.clear();
+    window.location.href = '/';
+});

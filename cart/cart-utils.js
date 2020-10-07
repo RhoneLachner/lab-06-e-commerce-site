@@ -1,4 +1,3 @@
-import { cart as cartArray } from '../data.js';
 import { findById } from '../utils.js';
 import { tools as toolsArray } from '../data.js';
 
@@ -45,6 +44,18 @@ export function renderCartTable(cartItem)
     tr.append(tdName, tdPrice, tdQuantity, tdTotal);
 
     return tr;
-};
+}
 
-
+/* import { tools } from '../utils.js';
+export function cartTotal(cartArray) {
+    let accumulator = 0;
+    for (let i = 0; i < cartArray.length; i++) {
+        const item = cartArray[i]; 
+        const actualItem = findById(tools, item.id);
+        const subtotal = actualItem.price * item.quantity;
+        console.log(subtotal);
+        accumulator = accumulator + subtotal;
+    }
+    return accumulator;
+}
+*/

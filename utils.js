@@ -1,5 +1,6 @@
 
 
+export const CART = 'CART';
 
 export function findById(someArray, someId) {
     for (let i = 0; i < someArray.length; i++) {
@@ -26,7 +27,7 @@ export function renderTools(tool) {
     }
 
     name.classList.add('name');
-    name.textContent = tool.name;
+    name.textContent = tool.title;
 
     li.appendChild(name);
 
@@ -46,10 +47,51 @@ export function renderTools(tool) {
 
     li.appendChild(price);
 
+
     button.textContent = 'Add to cart';
+
+    button.addEventListener('click', () => {
+    // get or initialize the cart
+    // MAGIC STRING
+        const cart = getFromLocalStorage(CART) || [];
+
+    // itemInCart will be either { id: 'apple', quantity: 2}, or undefined 
+        const itemInCart = findById(cart, tool.id);
+
+    // is this the first apple in the cart?
+        if (itemInCart === undefined) {
+        // if its not in the cart, this is our first apple
+        // so make a new cart item and put it in the array with quantity 1
+
+            const newCartItem = {
+                id: tool.id,
+                quantity: 1, 
+            };
+
+            cart.push(newCartItem);
+        } else {
+        // however, if i already have an apple, just increment the quantity of apples in the cart    
+            itemInCart.quantity++;
+        }
+
+        setInLocalStorage(CART, cart);
+    });
 
     li.appendChild(button);
 
     return li;
 }
-export default renderTools;
+export function getFromLocalStorage(key) {
+    const item = localStorage.getItem(key);
+
+    return JSON.parse(item);
+}
+
+// this function will not return anything
+export function setInLocalStorage(key, value) {
+    const stringyItem = JSON.stringify(value);
+
+    localStorage.setItem(key, stringyItem);
+
+    return value;
+}
