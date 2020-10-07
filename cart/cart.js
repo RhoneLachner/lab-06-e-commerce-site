@@ -6,6 +6,7 @@ import { findById, getFromLocalStorage, CART } from '../utils.js';
 
 const table = document.querySelector('tbody');
 const orderButton = document.querySelector('button');
+
 const cart = getFromLocalStorage(CART) || [];
 
 for (let i = 0; i < cart.length; i++) {
@@ -53,6 +54,11 @@ orderButton.addEventListener('click', () => {
     localStorage.clear();
     window.location.href = '/';
 
-
-
+    const emptyCart = JSON.stringify(cart, false, 2);
+    alert(emptyCart);
+    localStorage.removeItem;
+    window.location.href = '/';
 });
+
+
+
