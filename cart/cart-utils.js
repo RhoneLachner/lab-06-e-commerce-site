@@ -18,7 +18,7 @@ export function renderCartTable(cartItem)
     const tdTotal = document.createElement('td');
 
     tdQuantity.textContent = cartItem.quantity;
-console.log(cartItem);
+    console.log(cartItem);
     // we need the name and the price of the book
     // the name and price of the book live in the sourceOfTruth
     // we should use our findById function to get the airplane data from the source of truth
@@ -45,4 +45,6 @@ console.log(cartItem);
     tr.append(tdName, tdPrice, tdQuantity, tdTotal);
 
     return tr;
-}
+};
+
+

@@ -14,13 +14,13 @@ for (let i = 0; i < cart.length; i++) {
     table.appendChild(tr);    
 }
 
-const total = calculateTotal(cart);
+const total = calcLineItem(cart);
 
 const totalCell = document.querySelector('.total');
 
 totalCell.textContent = `Total: $${total}`;
 
-function calculateTotal(cartArray) {
+function calcLineItem(cartArray) {
     // initialize an accumulator to 0
     let accumulator = 0;
 
