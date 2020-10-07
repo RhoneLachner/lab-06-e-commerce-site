@@ -2,6 +2,7 @@
 
 import { cart, tools } from '../data.js';
 import { renderCartTable } from './cart-utils.js';
+import { findById } from '../utils.js';
 
 const table = document.querySelector('tbody');
 const orderButton = document.querySelector('button');
