@@ -1,0 +1,30 @@
+.tool {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 200px;
+    padding: 10px;
+    border: solid 1px;
+    text-align: center;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.tool > img {
+    width: 100px;
+
+}
+
+.tool > p {
+    margin: 0;
+}
+
+.on-sale {
+    background-color: lightpink;
+}
+
+ul {
+    display: flex;
+    flex-wrap: wrap;
+}

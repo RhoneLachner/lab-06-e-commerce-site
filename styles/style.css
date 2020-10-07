@@ -54,7 +54,13 @@ section {
 ul {
     align-content: center;
 }
+#campingImage {
+    height: 350px;
+}
 
+.homePhoto {
+    height: 350px;
+}
 header {
     display: flex;
     justify-content: flex-end;
