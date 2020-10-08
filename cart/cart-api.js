@@ -6,7 +6,7 @@ import { getFromLocalStorage, CART } from '../utils.js';
 
 
 
-export function clearCart(CART) {
+export function clearCart() {
     localStorage.clear();
 
 }

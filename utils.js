@@ -14,6 +14,7 @@ export function findById(someArray, someId) {
 
 export function renderTools(tool) {
     const li = document.createElement('li');
+
     const name = document.createElement('p');
     const maker = document.createElement('p');
     const stockImage = document.createElement('img');
@@ -27,7 +28,7 @@ export function renderTools(tool) {
     }
 
     name.classList.add('name');
-    name.textContent = tool.title;
+    name.textContent = tool.name;
 
     li.appendChild(name);
 
