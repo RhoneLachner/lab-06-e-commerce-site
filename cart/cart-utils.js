@@ -47,7 +47,7 @@ export function renderCartTable(cartItem)
     return tr;
 }
 
-/* import { tools } from '../utils.js';
+/*import { tools } from '../utils.js';
 export function cartTotal(cartArray) {
     let accumulator = 0;
     for (let i = 0; i < cartArray.length; i++) {
@@ -58,7 +58,7 @@ export function cartTotal(cartArray) {
         accumulator = accumulator + subtotal;
     }
     return accumulator;
-}
-*/
+
+}*/
 
 
