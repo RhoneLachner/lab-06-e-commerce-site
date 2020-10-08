@@ -49,7 +49,7 @@ orderButton.addEventListener('click', () => {
     alert(stringyCart);
 
     localStorage.removeItem(CART);
-    window.location.href = '"../index.html"';
+    window.location.href = '"../"';
 
     if (cart.length === 0) {
         orderButton.disabled = true;
