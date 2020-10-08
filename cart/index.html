@@ -16,7 +16,7 @@
 <body>
     <header>
         <div class="gutter-right logo">
-            <a href="/"><img src="../assets/tent.png"/></a>
+            <a href="/index.html"><img src="../assets/tent.png"/></a>
             
         </div>
     </header>
@@ -25,6 +25,9 @@
             Cart Items:
             <table>
                 <thead>
+                    <tr>
+                        <td></td>
+                    </tr>
                     <tr>
                         <th>Title</th>
                         <th>Price</th>
@@ -37,11 +40,15 @@
 
                 </tbody>
                 <tfoot>
-                 
+                    <tr>
+                        <td colspan="3"></td>
+                        <td><span id="total"></span></td>
+                    </tr>
                 </tfoot>
               </table>
               <div>
-                  <button>Place Order</button>
+                  <button id="orderButton">Place Order</button>
+                  <button id="clearCart">Clear Cart</button>
               </div>
         </section>
     </main>
