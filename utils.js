@@ -1,6 +1,6 @@
 
 
-import { tools as hardCodedTools } from '../data.js';
+import { tools as hardCodedTools } from './data.js';
 import { PRODUCTS } from './constants.js';
 
 
