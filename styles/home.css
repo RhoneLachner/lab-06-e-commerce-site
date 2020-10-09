@@ -1,1 +1,23 @@
 /* add home page styles here */
+
+
+h1 {
+    font-size: 30px;
+    margin: 20px;
+    font-weight: bolder;
+}
+
+body {
+    background-image: url("../assets/forest.jpeg");
+}
+
+#productName {
+font-size: 22px;
+}
+
+.main-section {
+    background-color: rgba(211, 211, 211, 0.915);
+    border-radius: 25px;
+    border-color: rgba(255, 255, 255, 0.379);
+    border-width: 3px;
+}

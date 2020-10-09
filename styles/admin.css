@@ -6,3 +6,7 @@
 #submitButton {
     margin: 10px;
 }
+
+body {
+    background-image: url("../assets/forest.jpeg");
+}
