@@ -9,22 +9,43 @@
     text-align: center;
     border-radius: 5px;
     margin: 10px;
+  
+}
+
+
+
+body {
+    background-image: url("../assets/forest.jpeg");
+}
+
+
+
+
+
+#productTitle {
+font-size: 24px;
+font-weight: bolder;
 }
 
 .tool > img {
     width: 100px;
-
+   
 }
 
 .tool > p {
     margin: 0;
+
 }
+ 
 
 .on-sale {
-    background-color: lightpink;
+    background-color: rgb(247, 216, 220);
 }
 
 ul {
     display: flex;
     flex-wrap: wrap;
+    align-content: center;
+    -ms-flex-align: ;
+  
 }
