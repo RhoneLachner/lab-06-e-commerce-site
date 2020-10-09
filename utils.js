@@ -2,7 +2,7 @@
 
 import { tools as hardCodedTools } from '../data.js';
 import { PRODUCTS } from './constants.js';
-import { tools } from './data.js';
+
 
 export const CART = 'CART';
 
@@ -33,6 +33,8 @@ export function getLocalStorageTools() {
 
     return localStorageTools;
 }
+
+
 
 
 export function renderTools(tool) {
@@ -120,22 +122,11 @@ export function setInLocalStorage(key, value) {
     return value;
 }
 export function addProduct(newItem){
-    const localStorageProducts = getLocalStorage();
+    const localStorageTools = getLocalStorageTools();
 
-    localStorageProducts.push(newItem);
+    localStorageTools.push(newItem);
 
-    const stringyLocalProduct = JSON.stringify(localStorageProducts);
+    const stringyLocalProduct = JSON.stringify(localStorageTools);
     localStorage.setItem(PRODUCTS, stringyLocalProduct);
 }
-export function getLocalStorage(){
-    let localStorageProduct = JSON.parse(localStorage.getItem(PRODUCTS));
-    
-    if (!localStorageProduct) {
-        const stringyProducts = JSON.stringify(tools);
-
-        localStorage.setItem(PRODUCTS, stringyProducts);
-        localStorageProduct = tools;
-    }
-    return localStorageProduct;
-}    
 
