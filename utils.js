@@ -1,5 +1,9 @@
 
 
+import { tools as hardCodedTools } from '../data.js';
+import { PRODUCTS } from './constants.js';
+import { tools } from './data.js';
+
 export const CART = 'CART';
 
 export function findById(someArray, someId) {
@@ -11,6 +15,25 @@ export function findById(someArray, someId) {
         }
     }
 }
+
+export function getLocalStorageTools() {
+
+    // go get localStorageTools from local storage and call them localStorageTools
+    let localStorageTools = JSON.parse(localStorage.getItem(PRODUCTS));
+
+    // if there are no localStorageTools in local storage yet
+    // if they've never been to the site
+    if (!localStorageTools) {
+        // go grab the hard coded localStorageTools, and SEED local storage with them
+        const stringyTools = JSON.stringify(hardCodedTools);
+
+        localStorage.setItem(PRODUCTS, stringyTools);
+        localStorageTools = hardCodedTools;
+    }
+
+    return localStorageTools;
+}
+
 
 export function renderTools(tool) {
     const li = document.createElement('li');
@@ -96,3 +119,23 @@ export function setInLocalStorage(key, value) {
 
     return value;
 }
+export function addProduct(newItem){
+    const localStorageProducts = getLocalStorage();
+
+    localStorageProducts.push(newItem);
+
+    const stringyLocalProduct = JSON.stringify(localStorageProducts);
+    localStorage.setItem(PRODUCTS, stringyLocalProduct);
+}
+export function getLocalStorage(){
+    let localStorageProduct = JSON.parse(localStorage.getItem(PRODUCTS));
+    
+    if (!localStorageProduct) {
+        const stringyProducts = JSON.stringify(tools);
+
+        localStorage.setItem(PRODUCTS, stringyProducts);
+        localStorageProduct = tools;
+    }
+    return localStorageProduct;
+}    
+

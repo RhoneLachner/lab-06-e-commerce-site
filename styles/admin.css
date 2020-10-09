@@ -1,0 +1,8 @@
+#adminForm {
+    display: flex;
+    flex-direction: column;
+}
+
+#submitButton {
+    margin: 10px;
+}
