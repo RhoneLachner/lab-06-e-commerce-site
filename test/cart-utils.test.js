@@ -7,9 +7,21 @@
         }
     }
 }*/
+import { renderCartTable } from '../cart/cart-utils.js';
+import { addProduct } from '../utils.js';
+
+
+import { findById, } from '../utils.js';
+import { tools } from '../data.js';
+
+
+
+
+
+
 const test = QUnit.test;
 
-import { renderCartTable } from '../cart/cart-utils.js';
+
 
 test('should take in a cartItem and return a tr element with the appropriate contents', (expect) => {
     const cartItem = {
@@ -30,8 +42,6 @@ test('should take in a cartItem and return a tr element with the appropriate con
     expect.equal(actual.outerHTML, expected);
 });
 
-import { findById } from '../utils.js';
-import { tools } from '../data.js';
 
 test('should take in an array and return the correct id', (expect) => {
 
@@ -50,3 +60,23 @@ test('should take in an array and return the correct id', (expect) => {
 
     expect.deepEqual(expected, actual);
 });
+
+
+test('addProduct should take in a product object and add it to local storage (returning nothing)', (expect) => {
+    const newTool = {
+        id: 'knife',
+        price: 20
+    };
+    const expectation = null;
+
+    //Arrang1e
+    // Set up your arguments and expectations    //Act 
+    // Call the function you're testing and set the result to a const
+    addProduct(newTool);
+
+    const localStorageAfter = JSON.parse(localStorage.getItem('tools'));
+    //Expect
+    // Make assertions about what is expected versus the actual result
+    expect.deepEqual(expectation, localStorageAfter);
+});
+
