@@ -34,9 +34,6 @@ export function getLocalStorageTools() {
     return localStorageTools;
 }
 
-
-
-
 export function renderTools(tool) {
     const li = document.createElement('li');
 
